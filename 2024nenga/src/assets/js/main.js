@@ -9,6 +9,7 @@ import.meta.glob(["../img/**"]);
 /* -----------------------------------------------------
 FVアニメーション
 ------------------------------------------------------ */
+const messageTitle = document.getElementById("js_messageTitle");
 const animationTitle = document.getElementById("js_animationTitleText");
 const animationText = document.getElementById("js_text");
 const mizuhikiAnimations = document.querySelectorAll(".js_mizuhiki");
@@ -23,6 +24,10 @@ mizuhikiAnimations.forEach(mizuhikiAnimation => {
 setTimeout(() => {
   animationText.classList.add("is_show");
 }, 6000);
+
+window.addEventListener("load", ()=> {
+  messageTitle.classList.add("is_show");
+});
 
 /* -----------------------------------------------------
 タブメニュー
@@ -73,7 +78,7 @@ const shareBtn = document.getElementById("js_shareBtn");
 const options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.3,
+  threshold: 0.25,
 };
 
 // IntersectionObserverの登録

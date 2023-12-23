@@ -267,7 +267,6 @@ img {
   100% {
     transform: translate(605.005005px, 61.5px) scale(1, 1);
   }
-
 }
 
 #eGeZtBpx7RP27 {
@@ -296,26 +295,6 @@ img {
   padding-top: calc(232 / 932 * 100svh);
   padding-bottom: calc(216 / 932 * 100svh);
   background-color: #fff;
-}
-
-@keyframes cloud-moved-left {
-  from {
-    transform: translate(0) scale(1);
-  }
-
-  to {
-    transform: translate(20%) scale(1.1);
-  }
-}
-
-@keyframes cloud-moved-right {
-  from {
-    transform: translate(0) scale(1);
-  }
-
-  to {
-    transform: translate(-20%) scale(1.1);
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -351,6 +330,15 @@ img {
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &.is_show {
+    &::before,
+    &::after {
+      opacity: 1;
+    }
   }
 
   &::before {
@@ -365,6 +353,26 @@ img {
     right: -5.5%;
     background-image: url("../img/illust_cloud02_right.svg");
     animation: cloud-moved-right 10s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes cloud-moved-left {
+  from {
+    transform: translate(0) scale(1);
+  }
+
+  to {
+    transform: translate(20%) scale(1.1);
+  }
+}
+
+@keyframes cloud-moved-right {
+  from {
+    transform: translate(0) scale(1);
+  }
+
+  to {
+    transform: translate(-20%) scale(1.1);
   }
 }
 
@@ -654,7 +662,6 @@ img {
     height: 50px;
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: contain;
   }
 }
 
@@ -664,22 +671,38 @@ img {
   }
 }
 
-.tab__btn--ryu.is_select {
-  background-color: #b89e2e;
-  border-color: #b89e2e;
-
+.tab__btn--ryu {
   &::after {
+    content: "";
+    background-size: 0 0;
     background-image: url("../img/icon01.svg");
+  }
+
+  &.is_select {
+    background-color: #b89e2e;
+    border-color: #b89e2e;
+
+    &::after {
+      background-size: contain;
+    }
   }
 }
 
-.tab__btn--okana.is_select {
-  color: #fff;
-  background-color: #cf2a23;
-  border-color: #cf2a23;
-
+.tab__btn--okana {
   &::after {
+    content: "";
+    background-size: 0 0;
     background-image: url("../img/icon02.svg");
+  }
+
+  &.is_select {
+    color: #fff;
+    background-color: #cf2a23;
+    border-color: #cf2a23;
+
+    &::after {
+      background-size: contain;
+    }
   }
 }
 
@@ -896,33 +919,36 @@ SNSシェア
 .share__illust {
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: 1.5%;
   left: 58%;
   z-index: 10;
   width: 100vw;
-  min-height: 322px;
+  min-height: 318px;
   object-fit: cover;
-  scale: 1.1;
+  scale: 1.15;
   transform: translateX(-50%);
 }
 
 @media screen and (min-width: 768px) {
   .share__illust {
+    bottom: 3%;
     width: 100%;
     min-height: 554px;
+    scale: 1.2;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .share__illust {
     bottom: 266px;
-    scale: 1;
+    scale: 1.1;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .share__illust {
     display: block;
+    left: 55.5%;
     bottom: 0;
     width: 100%;
     max-width: 1150px;
