@@ -8,5 +8,6 @@ module.exports = {
     "scss/at-mixin-pattern": null,
     "scss/dollar-variable-pattern": null,
     "scss/percent-placeholder-pattern": null,
+    "media-feature-range-notation": "prefix",
   },
 };
