@@ -12,7 +12,7 @@ const dir = {
 
 export default defineConfig({
   root: dir.src,
-  // base: "./",
+  base: "/nenga/2024/ryu-okana/",
   publicDir: `../${dir.publicDir}`,
   plugins: [
     viteHtmlOreder(),
