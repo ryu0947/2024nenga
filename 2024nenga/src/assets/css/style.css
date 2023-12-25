@@ -868,7 +868,7 @@ SNSシェア
   text-align: center;
   opacity: 0;
   translate: 0 40px;
-  transition: all 1s 0.5s;
+  transition: all 1s 0.4s;
 
   a {
     display: inline-block;
