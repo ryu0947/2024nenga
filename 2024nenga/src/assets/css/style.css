@@ -591,7 +591,7 @@ img {
 
 .dragon_tail01__sp {
   position: absolute;
-  top: -3%;
+  top: -53px;
   right: calc(112 / 16 * -1%);
   z-index: 10;
 }
@@ -603,7 +603,7 @@ img {
 
   .dragon_tail01__pc {
     display: block;
-    top: 9%;
+    top: 124px;
     right: calc(668 / 190 * -1%);
   }
 }
@@ -617,7 +617,7 @@ img {
 }
 
 .dragon_tail02__sp {
-  top: 3%;
+  top: 38px;
   right: calc(262 / 48 * -1%);
 }
 
@@ -628,7 +628,7 @@ img {
 
   .dragon_tail02__pc {
     display: block;
-    top: 25%;
+    top: 346px;
     right: calc(878 / 120 * -1%);
   }
 }
