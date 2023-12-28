@@ -70,7 +70,7 @@ tabBtns.forEach((tabBtn) => {
  スクロールアニメーション
 ------------------------------------------------------ */
 // ターゲット要素を取得
-const targets = document.querySelectorAll(".js_fadeIn");
+const targets = document.querySelectorAll(".js_fadeIn, .js_fade");
 const shareTitle = document.getElementById("js_shareTitle");
 const shareBtn = document.getElementById("js_shareBtn");
 

@@ -73,7 +73,7 @@ img {
 /* コンテンツ全体のスタイル */
 .container {
   padding: 0 4.65%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -98,6 +98,15 @@ img {
   &.is_show {
     opacity: 1;
     translate: 0 0;
+  }
+}
+
+.js_fade {
+  opacity: 0;
+  transition: opacity 1s;
+
+  &.is_show {
+    opacity: 1;
   }
 }
 
@@ -379,11 +388,13 @@ img {
 .message__title_text {
   span {
     opacity: 0;
+    visibility: hidden;
   }
 
   &.is_show span {
     opacity: 1;
-    transition: opacity 1000ms ease-in-out;
+    visibility: visible;
+    transition: all 1000ms ease-in-out;
   }
 
   span:nth-child(1) {
@@ -557,26 +568,68 @@ img {
 /* -----------------------------------------------------
 振り返りと抱負
 ------------------------------------------------------ */
+.review {
+  position: relative;
+}
+
 @media screen and (min-width: 1280px) {
   .review {
-    position: relative;
     width: 100%;
-    max-width: 1006px;
+    max-width: 878px;
     margin: auto;
+  }
+}
 
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 10%;
-      right: 0;
-      z-index: 10;
-      width: calc(225 / 993 * 100%);
-      max-width: 225px;
-      height: 100%;
-      background: url("../img/illust_dragon_tail01.svg") no-repeat 0 0 / 100%
-        auto;
-    }
+.dragon_tail01 {
+  position: absolute;
+  z-index: 10;
+}
+
+.dragon_tail01__pc {
+  display: none;
+}
+
+.dragon_tail01__sp {
+  position: absolute;
+  top: -3%;
+  right: calc(112 / 16 * -1%);
+  z-index: 10;
+}
+
+@media screen and (min-width: 1024px) {
+  .dragon_tail01__sp {
+    display: none;
+  }
+
+  .dragon_tail01__pc {
+    display: block;
+    top: 9%;
+    right: calc(668 / 190 * -1%);
+  }
+}
+
+.dragon_tail02 {
+  position: absolute;
+}
+
+.dragon_tail02__pc {
+  display: none;
+}
+
+.dragon_tail02__sp {
+  top: 3%;
+  right: calc(262 / 48 * -1%);
+}
+
+@media screen and (min-width: 1024px) {
+  .dragon_tail02__sp {
+    display: none;
+  }
+
+  .dragon_tail02__pc {
+    display: block;
+    top: 25%;
+    right: calc(878 / 120 * -1%);
   }
 }
 
