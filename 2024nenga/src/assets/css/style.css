@@ -996,7 +996,7 @@ SNSシェア
   top: 0;
   left: 0;
   opacity: 0;
-  animation: image-switch-animation 6s infinite;
+  animation: image-switch-animation 4s infinite;
 }
 
 @keyframes image-switch-animation {
@@ -1008,11 +1008,11 @@ SNSシェア
     opacity: 1;
   }
 
-  86% {
+  80% {
     opacity: 1;
   }
 
-  90% {
+  86% {
     opacity: 0;
   }
 
@@ -1022,7 +1022,7 @@ SNSシェア
 }
 
 .share__img:nth-child(2) {
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 /* -----------------------------------------------------
