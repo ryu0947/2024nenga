@@ -101,15 +101,6 @@ img {
   }
 }
 
-.js_fade {
-  opacity: 0;
-  transition: opacity 1s;
-
-  &.is_show {
-    opacity: 1;
-  }
-}
-
 /* -----------------------------------------------------
 水引アニメーション
 ------------------------------------------------------ */
@@ -583,6 +574,17 @@ img {
 .dragon_tail01 {
   position: absolute;
   z-index: 10;
+  animation: taile_moved 0.5s infinite alternate;
+}
+
+@keyframes taile_moved {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: -4deg;
+  }
 }
 
 .dragon_tail01__pc {
